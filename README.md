@@ -134,3 +134,16 @@ Now, run `reboot`
 ### Post-install
 #### Set a user password
 Log in as root, then run `passwd toh995` to set a user password
+
+#### Set up GitHub ssh
+Follow the instructions at https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+
+#### Clone this repo to $HOME
+```bash
+cd $HOME
+git clone git@github.com:toh995/.dotfiles-nix.git
+cd .dotfiles-nix
+# copy the hardware config file
+# NOTE: may need to rework this, if we expand to multiple machines!!!
+cp /etc/nixos/hardware-configuration.nix hardware-config.nix
+```
