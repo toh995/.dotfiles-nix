@@ -17,7 +17,7 @@
   programs.zsh.enable = true;
   environment.shells = [ pkgs.zsh ];
 
-  # Set up user account
+  # Set up the user account
   users.users.toh995 = {
     name = "toh995";
     home = "/home/toh995";
@@ -26,4 +26,7 @@
     isNormalUser = true;
     extraGroups = [ "wheel" ];
   };
+
+  # Enable hyprland
+  programs.hyprland.enable = true;
 }
