@@ -9,16 +9,15 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, ... }:
-    let modules = [
-      ./system-config.nix
-      home-manager.nixosModules.home-manager
-      ./home-manager-config.nix
-    ];
-    in {
-      nixosConfigurations = {
-        nixos-utm = nixpkgs.lib.nixosSystem { inherit modules; system = "aarch64-linux" };
-      };
+  outputs = { nixpkgs, home-manager, ... }: {
+    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+      system = "x86_64-linux";
+      modules = [
+        ./hardware-config.nix
+        ./system-config.nix
+        home-manager.nixosModules.home-manager
+        ./home-manager-config.nix
+      ];
     };
   };
 }
