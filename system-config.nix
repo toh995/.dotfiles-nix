@@ -23,4 +23,7 @@
     extraGroups = [ "wheel" ];
     shell = pkgs.zsh;
   };
+
+  # Enable hyprland
+  programs.hyprland.enable = true;
 }

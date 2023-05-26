@@ -11,8 +11,17 @@
     programs.home-manager.enable = true;
 
     home.packages = with pkgs; [
+      # window manager
+      hyprland
+
+      # CLI programs
+      git
       neovim
       tmux
+
+      # GUI programs
+      brave
+      kitty
     ];
 
     # DO NOT CHANGE
