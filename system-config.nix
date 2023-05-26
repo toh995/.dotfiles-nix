@@ -19,9 +19,13 @@
 
   # Set up user account
   users.users.toh995 = {
+    name = "toh995";
+    home = "/home/toh995";
+    createHome = true;
+    shell = pkgs.zsh;
     isNormalUser = true;
     extraGroups = [ "wheel" ];
-    shell = pkgs.zsh;
+    # initialPassword
   };
 
   # Enable hyprland
