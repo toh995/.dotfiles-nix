@@ -14,14 +14,31 @@
       # window manager
       hyprland
 
-      # CLI programs
-      git
-      neovim
-      tmux
-
       # GUI programs
+      alacritty
       brave
-      kitty
+      kitty # todo: switch out kitty
+
+      # CLI programs
+      btop
+      # delta
+      git
+      lazydocker
+      lazygit
+      mpv
+      neofetch
+      neovim
+      ripgrep
+      tmux
+      trash-cli
+      youtube-dl
+      # zoxide
+      # zsh-autosuggestions
+      # zsh-syntax-highlighting
+
+      # todo: different terminal theme...?
+      # todo: install nerdfont...?
+      # zsh-powerlevel10k
     ];
 
     # git config
