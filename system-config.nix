@@ -51,12 +51,23 @@
 
       # Reference: https://wiki.archlinux.org/title/sudo#Reduce_the_number_of_times_you_have_to_type_a_password
       Defaults timestamp_timeout=30
-
-      # Run these commands without password
-      # Reference: https://askubuntu.com/a/168885
-      %wheel ALL=(ALL:ALL) NOPASSWD: ${pkgs.systemd}/bin/systemctl suspend
-      %wheel ALL=(ALL:ALL) NOPASSWD: ${pkgs.systemd}/bin/reboot
-      %wheel ALL=(ALL:ALL) NOPASSWD: ${pkgs.systemd}/bin/poweroff
     '';
+    extraRules = [{
+      commands = [
+        {
+          command = "${pkgs.systemd}/bin/systemctl suspend";
+          options = [ "NOPASSWD" ];
+        }
+        {
+          command = "${pkgs.systemd}/bin/reboot";
+          options = [ "NOPASSWD" ];
+        }
+        {
+          command = "${pkgs.systemd}/bin/poweroff";
+          options = [ "NOPASSWD" ];
+        }
+      ];
+      groups = [ "wheel" ];
+    }];
   };
 }
