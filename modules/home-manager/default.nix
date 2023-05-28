@@ -20,6 +20,14 @@
       '';
     };
 
+    # Set some default env vars
+    home.sessionVariables = {
+      BROWSER = "brave";
+      EDITOR = "nvim";
+      PAGER = "less";
+      VISUAL = "nvim";
+    };
+
     home.packages = with pkgs; [
       # window manager
       hyprland
@@ -55,6 +63,7 @@
     imports = [
       ./git
       ./lazygit
+      ./xdg
       ./zsh
     ];
   };

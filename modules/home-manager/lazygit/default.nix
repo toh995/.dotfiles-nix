@@ -1,3 +1,3 @@
 {
-  home.file.".config/lazygit/config.yml".source = ./config.yml;
+  xdg.configFile."lazygit/config.yml".source = ./config.yml;
 }
