@@ -38,6 +38,7 @@
       mpv
       neofetch
       neovim
+      nnn
       ripgrep
       tmux
       trash-cli
