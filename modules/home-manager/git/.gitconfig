@@ -1,0 +1,23 @@
+[user]
+  name = toh995
+  email = 52012721+toh995@users.noreply.github.com
+
+[pull]
+  ff = only
+
+# set up the diff tool (delta)
+[core]
+  pager = delta
+[interactive]
+  diffFilter = delta --color-only
+[add.interactive]
+  useBuiltin = false
+[delta]
+  diff-highlight = true # custom styling
+  line-numbers = true   # show line numbers
+  navigate = true       # use n and N to move between diff sections
+  paging = always       # always show output in a pager
+[merge]
+  conflictstyle = diff3
+[diff]
+  colorMoved = default

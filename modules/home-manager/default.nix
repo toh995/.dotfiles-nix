@@ -31,7 +31,7 @@
 
       # CLI programs
       btop
-      # delta
+      delta
       git
       lazydocker
       lazygit
@@ -52,11 +52,8 @@
       # zsh-powerlevel10k
     ];
 
-    # git config
-    programs.git = {
-      enable = true;
-      userName = "toh995";
-      userEmail = "52012721+toh995@users.noreply.github.com";
-    };
+    imports = [
+      ./git
+    ];
   };
 }
