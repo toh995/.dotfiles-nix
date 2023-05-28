@@ -10,6 +10,16 @@
 
     programs.home-manager.enable = true;
 
+    # Auto-start hyprland on login
+    programs.zsh = {
+      enable = true;
+      profileExtra = ''
+        if [ -z $DISPLAY ] && [ $XDG_VTNR -eq 1 ]; then
+          exec Hyprland
+        fi
+      '';
+    };
+
     home.packages = with pkgs; [
       # window manager
       hyprland

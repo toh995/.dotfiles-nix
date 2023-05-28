@@ -41,6 +41,9 @@
     extraGroups = [ "wheel" ];
   };
 
+  # Auto-login
+  services.getty.autologinUser = "toh995";
+
   # Set up sudo
   security.sudo = {
     enable = true;
