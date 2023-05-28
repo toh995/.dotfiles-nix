@@ -1,0 +1,14 @@
+promptToReturnFromSubprocess: false
+gui:
+  showIcons: true
+git:
+  paging:
+    colorArg: always -w
+    pager: delta --dark --paging=never
+  commitPrefixes:
+    auditboard-frontend:
+      pattern: "^(SOX-[0-9]{1,}).*"
+      replace: "$1"
+    soxhub-api:
+      pattern: "^(SOX-[0-9]{1,}).*"
+      replace: "$1"

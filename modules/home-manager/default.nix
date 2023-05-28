@@ -25,7 +25,7 @@
       hyprland
 
       # GUI programs
-      alacritty
+      alacritty # todo: configure alacritty, with appropriate font
       brave
       kitty # todo: switch out kitty
 
@@ -54,6 +54,7 @@
 
     imports = [
       ./git
+      ./lazygit
     ];
   };
 }
