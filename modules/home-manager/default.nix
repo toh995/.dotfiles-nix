@@ -37,24 +37,25 @@
       lazygit
       mpv
       neofetch
-      neovim
+      neovim # todo: configure
       nnn
       ripgrep
-      tmux
+      tmux # todo: configure
       trash-cli
       youtube-dl
       # zoxide
-      # zsh-autosuggestions
-      # zsh-syntax-highlighting
 
       # todo: different terminal theme...?
       # todo: install nerdfont...?
       # zsh-powerlevel10k
+
+      # todo: spotify-tui??
     ];
 
     imports = [
       ./git
       ./lazygit
+      ./zsh
     ];
   };
 }
