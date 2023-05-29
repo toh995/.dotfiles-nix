@@ -51,7 +51,7 @@
       tmux # todo: configure
       trash-cli
       youtube-dl
-      # zoxide
+      zoxide
 
       # todo: different terminal theme...?
       # todo: install nerdfont...?

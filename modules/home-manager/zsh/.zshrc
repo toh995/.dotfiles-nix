@@ -39,6 +39,10 @@ export NNN_OPTS="H"
 alias ta="tmux attach-session -t"
 alias tls="tmux ls"
 alias tn="tmux new-session -s"
+
+# zoxide
+eval "$(zoxide init zsh)"
+alias j="z"
 #########################
 # End custom zsh config #
 #########################
