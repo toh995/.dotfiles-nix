@@ -51,7 +51,7 @@
       neovim # todo: configure
       nnn
       ripgrep
-      tmux # todo: configure
+      tmux
       trash-cli
       youtube-dl
       zoxide
@@ -69,6 +69,7 @@
       ./alacritty
       ./git
       ./lazygit
+      ./tmux
       ./xdg
       ./zsh
     ];
