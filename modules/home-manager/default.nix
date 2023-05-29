@@ -48,7 +48,7 @@
       lazygit
       mpv
       neofetch
-      neovim # todo: configure
+      neovim
       nnn
       ripgrep
       tmux
@@ -69,6 +69,7 @@
       ./alacritty
       ./git
       ./lazygit
+      ./nvim
       ./tmux
       ./xdg
       ./zsh
