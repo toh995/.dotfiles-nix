@@ -28,12 +28,15 @@
       VISUAL = "nvim";
     };
 
+    # Allow font installations
+    fonts.fontconfig.enable = true;
+
     home.packages = with pkgs; [
       # window manager
       hyprland
 
       # GUI programs
-      alacritty # todo: configure alacritty, with appropriate font
+      alacritty
       brave
       kitty # todo: switch out kitty
 
@@ -53,14 +56,17 @@
       youtube-dl
       zoxide
 
-      # todo: different terminal theme...?
-      # todo: install nerdfont...?
-      # zsh-powerlevel10k
+      # powerlevel10k, font
+      zsh-powerlevel10k
+      meslo-lgs-nf
+      #(pkgs.nerdfonts.override { fonts = [ "BigBlueTerminal" ]; })
+
 
       # todo: spotify-tui??
     ];
 
     imports = [
+      ./alacritty
       ./git
       ./lazygit
       ./xdg
