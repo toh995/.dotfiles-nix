@@ -24,7 +24,7 @@ function plugin_config.configure()
 	-- plugin-specific setup
 	-- we need to configure the color schemes FIRST,
 	-- so that the rest of the plugins have knowledge of it.
-	-- the rest of the plugings are configured in
+	-- the rest of the plugins are configured in
 	-- alphabetical order
 	require("plugin_config.color_schemes").configure()
 
@@ -115,7 +115,8 @@ function init_packer()
 		use({
 			"nvim-treesitter/nvim-treesitter",
 			run = function()
-				require("nvim-treesitter.install").update({ with_sync = true })
+				local ts_update = require("nvim-treesitter.install").update({ with_sync = true })
+				ts_update()
 			end,
 		})
 		use("nvim-treesitter/nvim-treesitter-context")

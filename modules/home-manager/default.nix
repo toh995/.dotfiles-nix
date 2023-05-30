@@ -1,4 +1,4 @@
-{ home-manager, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   home-manager.useGlobalPkgs = true;
@@ -32,7 +32,7 @@
     fonts.fontconfig.enable = true;
 
     home.packages = with pkgs; [
-      # window manager
+      # Window manager
       hyprland
 
       # GUI programs
@@ -48,7 +48,6 @@
       lazygit
       mpv
       neofetch
-      neovim
       nnn
       ripgrep
       tmux
@@ -61,6 +60,28 @@
       meslo-lgs-nf
       #(pkgs.nerdfonts.override { fonts = [ "BigBlueTerminal" ]; })
 
+      # Neovim
+      neovim
+      # NOTE:
+      # Normally, we would use mason.nvim to install
+      # language servers and formatters.
+      #
+      # In particular, mason.nvim will download binaries for each 
+      # language server and formatter.
+      #
+      # HOWEVER, this is problematic for NixOS - generally speaking,
+      # the distro won't run binaries, unless they are installed by
+      # Nix itself.
+      #
+      # So we'll install the language servers and formatters here.
+
+      # Formatters
+      stylua
+      # Language Servers
+      lua-language-server
+
+      # build dependencies
+      gcc # for nvim-treesitter
 
       # todo: spotify-tui??
     ];
