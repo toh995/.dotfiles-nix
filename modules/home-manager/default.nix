@@ -79,6 +79,7 @@
       stylua
       # Language Servers
       lua-language-server
+      nil # for nix
 
       # build dependencies
       gcc # for nvim-treesitter

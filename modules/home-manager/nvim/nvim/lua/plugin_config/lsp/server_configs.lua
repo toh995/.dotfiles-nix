@@ -93,6 +93,11 @@ function server_configs.configure()
 		},
 	})
 
+	---------
+	-- Nix --
+	---------
+	lspconfig.nil_ls.setup({})
+
 	---------------------------
 	-- TypeScript/JavaScript --
 	---------------------------
