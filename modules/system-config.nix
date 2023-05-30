@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   # DO NOT CHANGE
@@ -9,6 +9,8 @@
   boot.loader.efi.canTouchEfiVariables = true;
   # Maximum number of latest generations in the boot menu
   boot.loader.systemd-boot.configurationLimit = 100;
+  # Auto-select the first boot entry
+  boot.loader.timeout = 0;
 
   # Enable flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
