@@ -90,6 +90,7 @@
 
     imports = [
       ./alacritty
+      ./brave
       ./eww
       ./git
       ./hyprland
