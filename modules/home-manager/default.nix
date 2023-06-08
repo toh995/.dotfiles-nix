@@ -38,7 +38,6 @@
       # GUI programs
       alacritty
       brave
-      kitty # todo: switch out kitty
 
       # CLI programs
       btop
@@ -90,6 +89,7 @@
     imports = [
       ./alacritty
       ./git
+      ./hyprland
       ./lazygit
       ./nvim
       ./tmux

@@ -12,6 +12,10 @@
   # Auto-select the first boot entry
   boot.loader.timeout = 0;
 
+  # Set the timezone
+  time.timeZone = "US/Pacific";
+  # services.automatic-timezoned.enable = true;
+
   # Enable flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
@@ -34,6 +38,7 @@
   environment.shells = [ pkgs.zsh ];
 
   # Set up the user account
+  services.getty.autologinUser = "toh995";
   users.users.toh995 = {
     name = "toh995";
     home = "/home/toh995";
@@ -42,9 +47,6 @@
     isNormalUser = true;
     extraGroups = [ "wheel" ];
   };
-
-  # Auto-login
-  services.getty.autologinUser = "toh995";
 
   # Set up sudo
   security.sudo = {
