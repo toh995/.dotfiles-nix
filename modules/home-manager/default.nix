@@ -33,6 +33,7 @@
 
     home.packages = with pkgs; [
       # Window manager
+      eww-wayland
       hyprland
 
       # GUI programs
@@ -88,6 +89,7 @@
 
     imports = [
       ./alacritty
+      ./eww
       ./git
       ./hyprland
       ./lazygit
