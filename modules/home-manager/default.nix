@@ -16,6 +16,7 @@
       profileExtra = ''
         if [ -z $DISPLAY ] && [ $XDG_VTNR -eq 1 ]; then
           exec Hyprland
+          # exec Hyprland --config $HOME/.dotfiles-nix/modules/home-manager/hyprland/hyprland.conf
         fi
       '';
     };
