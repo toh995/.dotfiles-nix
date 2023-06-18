@@ -57,6 +57,9 @@
       youtube-dl
       zoxide
 
+      jq
+      socat
+
       # powerlevel10k, font
       zsh-powerlevel10k
       meslo-lgs-nf
@@ -80,11 +83,30 @@
       # Formatters
       stylua
       # Language Servers
+      clang-tools
       lua-language-server
       nil # for nix
 
       # build dependencies
       gcc # for nvim-treesitter
+
+      # dependencies for hyprland plugin
+      cairo
+      cmake
+      gnumake
+      hyprland-protocols
+      libdrm
+      libGLU
+      libinput
+      libxkbcommon
+      meson
+      ninja
+      pango
+      pixman
+      pkg-config
+      python3Minimal
+      wayland
+      wayland-protocols
 
       # todo: spotify-tui??
     ];

@@ -1,0 +1,36 @@
+#! /usr/bin/env bash
+
+# NOTE that, in Hyprland, we cannot 0-index workspace_ids.
+# So we often have to adjust the workspace_id by 1, to
+# ensure accuracy in the modular arithmetic.
+readonly NUM_WORKSPACES_PER_MONITOR=3
+
+get_active_workspace_id() {
+  local ret
+  ret=$(hyprctl -j activeworkspace | jq ".id")
+  echo $ret
+}
+
+get_monitor_id_for_workspace() {
+  local -ri workspace_id=$1
+  # use integer division
+  echo $(( ($workspace_id - 1) / $NUM_WORKSPACES_PER_MONITOR ))
+}
+
+get_workspace_ids_for_monitor() {
+  local -ri monitor_id=$1
+  local -i lower_bound upper_bound
+  lower_bound=$(( 1 + ($monitor_id * $NUM_WORKSPACES_PER_MONITOR) ))
+  upper_bound=$(( (-1) + $lower_bound + $NUM_WORKSPACES_PER_MONITOR))
+
+  for i in {$lower_bound..$upper_bound}; do
+    echo $i
+  done
+}
+
+get_active_workspace_id_for_monitor() {
+  local -ri monitor_id=$1
+  local ret
+  ret=$(hyprctl -j monitors | jq ".[] | select(.id == ${monitor_id}) | .activeWorkspace.id")
+  echo $ret
+}

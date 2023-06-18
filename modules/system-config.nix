@@ -22,6 +22,9 @@
   # Enable hyprland
   programs.hyprland.enable = true;
 
+  # OpenGL
+  hardware.opengl.enable = true;
+
   # Enable audio
   # Reference: https://nixos.wiki/wiki/PipeWire
   security.rtkit.enable = true;

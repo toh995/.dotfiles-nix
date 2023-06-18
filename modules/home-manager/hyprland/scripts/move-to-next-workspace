@@ -1,0 +1,23 @@
+#! /usr/bin/env bash
+
+DIRECTION=$1
+
+NUM_WORKSPACES_PER_MONITOR=3
+CURRENT_WORKSPACE_ID=$(hyprctl -j activeworkspace | jq ".id")
+case $DIRECTION in
+  "+1")
+    NEXT_WORKSPACE_ID=$(( $CURRENT_WORKSPACE_ID + 1 ))
+    ;;
+  "-1")
+    NEXT_WORKSPACE_ID=$(( $CURRENT_WORKSPACE_ID - 1 ))
+    ;;
+esac
+
+# utilize integer divion to get the group_id
+# need to subtract 1, to account for hyprland's lack of 0-indexing
+CURRENT_GROUP_ID=$(( ($CURRENT_WORKSPACE_ID - 1) / $NUM_WORKSPACES_PER_MONITOR ))
+NEXT_GROUP_ID=$(( ($NEXT_WORKSPACE_ID - 1) / $NUM_WORKSPACES_PER_MONITOR ))
+
+if [ $CURRENT_GROUP_ID == $NEXT_GROUP_ID ]; then
+  hyprctl dispatch movetoworkspace $NEXT_WORKSPACE_ID
+fi

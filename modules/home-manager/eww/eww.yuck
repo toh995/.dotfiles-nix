@@ -7,8 +7,13 @@
                                :anchor "top center")
            :stacking "fg"
            :exclusive true
-  "${date-time}"
+  "${date-time} ACTIVE: ${active-workspace-id}"
 )
 
 (defpoll date-time :interval "60s"
   "date +'%a %b %d, %I:%M %P'")
+
+(deflisten active-workspace-id "./scripts/get-active-workspace-id-for-monitor")
+
+
+(defwidget )

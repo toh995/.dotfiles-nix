@@ -19,6 +19,14 @@ end
 
 function server_configs.configure()
 	---------
+	-- C++ --
+	---------
+	require("lspconfig").clangd.setup({
+		capabilities = capabilities,
+		on_attach = set_lsp_keybindings,
+	})
+
+	---------
 	-- CSS --
 	---------
 	lspconfig.cssls.setup({
