@@ -51,6 +51,7 @@
       neofetch
       nnn
       ripgrep
+      tldr
       tmux
       trash-cli
       youtube-dl
