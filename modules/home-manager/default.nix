@@ -10,12 +10,17 @@
 
     programs.home-manager.enable = true;
 
+    xsession.enable = true;
+    xsession.windowManager.xmonad = {
+      enable = true;
+    };
+
     # Auto-start hyprland on login
     programs.zsh = {
       enable = true;
       profileExtra = ''
         if [ -z $DISPLAY ] && [ $XDG_VTNR -eq 1 ]; then
-          exec Hyprland
+          # exec Hyprland
           # exec Hyprland --config $HOME/.dotfiles-nix/modules/home-manager/hyprland/hyprland.conf
         fi
       '';

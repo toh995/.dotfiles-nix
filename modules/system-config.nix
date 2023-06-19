@@ -22,6 +22,11 @@
   # Enable hyprland
   programs.hyprland.enable = true;
 
+  # set up x11
+  services.xserver.enable = true;
+  services.xserver.autorun = false;
+  services.xserver.displayManager.startx.enable = true;
+
   # Enable audio
   # Reference: https://nixos.wiki/wiki/PipeWire
   security.rtkit.enable = true;
