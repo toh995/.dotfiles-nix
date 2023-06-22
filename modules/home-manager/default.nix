@@ -1,5 +1,8 @@
 { pkgs, ... }:
 
+let pyEnv = pkgs.python3.withPackages (p: [pkgs.qtile-unwrapped]);
+
+in
 {
   home-manager.useGlobalPkgs = true;
   home-manager.useUserPackages = true;
@@ -15,7 +18,8 @@
       enable = true;
       profileExtra = ''
         if [ -z $DISPLAY ] && [ $XDG_VTNR -eq 1 ]; then
-          exec Hyprland
+          # ${pyEnv}/bin/qtile start -b wayland
+          # exec Hyprland
           # exec Hyprland --config $HOME/.dotfiles-nix/modules/home-manager/hyprland/hyprland.conf
         fi
       '';
@@ -103,6 +107,7 @@
       ./hyprland
       ./lazygit
       ./nvim
+      ./qtile
       ./tmux
       ./xdg
       ./zsh

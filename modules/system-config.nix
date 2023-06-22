@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 
 {
   # DO NOT CHANGE
@@ -22,6 +22,27 @@
   # Enable hyprland
   programs.hyprland.enable = true;
 
+  # Enable qtile
+  services.xserver.enable = true;
+  services.xserver.windowManager.qtile = {
+    enable = true;
+    backend = "x11";
+    # backend = "wayland";
+    # configFile = "${config.users.users.toh995.home}/.dotfiles-nix/modules/home-manager/qtile/config.py";
+  };
+  services.xserver.displayManager = {
+    defaultSession="none+qtile";
+    autoLogin = {
+      enable = true;
+      user = "toh995";
+    };
+    lightdm = {
+      enable = true;
+      greeter.enable = false;
+      autoLogin.timeout = 0;
+    };
+  };
+
   # Enable audio
   # Reference: https://nixos.wiki/wiki/PipeWire
   security.rtkit.enable = true;
@@ -38,7 +59,7 @@
   environment.shells = [ pkgs.zsh ];
 
   # Set up the user account
-  services.getty.autologinUser = "toh995";
+  # services.getty.autologinUser = "toh995";
   users.users.toh995 = {
     name = "toh995";
     home = "/home/toh995";
