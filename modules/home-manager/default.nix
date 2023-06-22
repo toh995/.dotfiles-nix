@@ -77,11 +77,17 @@
       #
       # So we'll install the language servers and formatters here.
 
-      # Formatters
-      stylua
-      # Language Servers
+      # lua
       lua-language-server
-      nil # for nix
+      stylua
+      # nix
+      nil
+      # python
+      black # formatter
+      # nodePackages.pyright # type-checker
+      python311Packages.python-lsp-server
+      ruff # linter
+      python311Packages.ruff-lsp
 
       # build dependencies
       gcc # for nvim-treesitter

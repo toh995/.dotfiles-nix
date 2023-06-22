@@ -96,7 +96,23 @@ function server_configs.configure()
 	---------
 	-- Nix --
 	---------
-	lspconfig.nil_ls.setup({})
+	lspconfig.nil_ls.setup({
+		capabilities = capabilities,
+		on_attach = set_lsp_keybindings,
+	})
+
+	------------
+	-- Python --
+	------------
+	-- do we need "pyright" too...?
+	local python_servers = { "pylsp", "ruff_lsp" }
+
+	for _, server in ipairs(python_servers) do
+		lspconfig[server].setup({
+			capabilities = capabilities,
+			on_attach = set_lsp_keybindings,
+		})
+	end
 
 	---------------------------
 	-- TypeScript/JavaScript --

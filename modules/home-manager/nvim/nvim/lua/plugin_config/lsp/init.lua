@@ -87,8 +87,12 @@ function configure_null_ls()
 	local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 	null_ls.setup({
 		sources = {
-			-- LUA
+			-- Lua
 			null_ls.builtins.formatting.stylua,
+
+			-- Python
+			null_ls.builtins.formatting.black,
+			null_ls.builtins.formatting.ruff,
 
 			-- JS, TS, HTML
 			-- List eslint LAST, to ensure it takes precedence over prettier
