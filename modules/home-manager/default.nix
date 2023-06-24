@@ -102,6 +102,7 @@ in
 
     imports = [
       ./alacritty
+      ./bash
       ./brave
       ./eww
       ./git
