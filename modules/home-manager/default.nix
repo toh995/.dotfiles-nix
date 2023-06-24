@@ -109,6 +109,7 @@ in
       ./hyprland
       ./lazygit
       ./nvim
+      ./python
       ./qtile
       ./tmux
       ./xdg
