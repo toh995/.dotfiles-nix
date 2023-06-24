@@ -2,6 +2,7 @@ from libqtile import bar, hook, layout, qtile, widget
 from libqtile.config import Group, Key, Screen
 from libqtile.lazy import lazy
 
+import colors
 from screens_groups import (
     GROUP_NAMES,
     Direction,
@@ -48,7 +49,13 @@ def on_startup() -> None:
 # Move the cursor, when changing focus
 cursor_warp = True
 
-layouts = [layout.MonadTall()]
+layouts = [
+    layout.MonadTall(
+        border_width=1,
+        border_focus=colors.GLAUCOUS_BLUE,
+        single_border_width=0,
+    )
+]
 
 groups = [Group(name, label="󰏃") for name in GROUP_NAMES]
 
@@ -62,8 +69,8 @@ screens = [
                 widget.GroupBox(
                     visible_groups=group_names_for_screen_id(screen_id),
                     highlight_method="block",
-                    active="FFFFFF",
-                    inactive="FFFFFF",
+                    active=colors.WHITE,
+                    inactive=colors.WHITE,
                     fontsize=BAR_FONT_SIZE,
                 ),
                 widget.Spacer(),
