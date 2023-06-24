@@ -19,6 +19,7 @@ in
       profileExtra = ''
         if [ -z $DISPLAY ] && [ $XDG_VTNR -eq 1 ]; then
           # ${pyEnv}/bin/qtile start -b wayland
+          # ${pyEnv}/bin/qtile start -b wayland --config $HOME/.dotfiles-nix/modules/home-manager/qtile/config.py
           # exec Hyprland
           # exec Hyprland --config $HOME/.dotfiles-nix/modules/home-manager/hyprland/hyprland.conf
         fi
@@ -38,7 +39,7 @@ in
 
     home.packages = with pkgs; [
       # Window manager
-      eww-wayland
+      # eww-wayland
       hyprland
 
       # GUI programs

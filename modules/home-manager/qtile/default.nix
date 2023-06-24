@@ -1,3 +1,6 @@
 {
-  xdg.configFile."qtile/config.py".source = ./config.py;
+  xdg.configFile.qtile = {
+    source = ./.;
+    recursive = true;
+  };
 }
