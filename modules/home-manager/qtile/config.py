@@ -87,7 +87,12 @@ screens = [
     for screen_id in SCREEN_IDS
 ]
 
+# import os
+# ALACRITTY_CUSTOM = (
+#     f"{os.environ['HOME']}/.dotfiles-nix/modules/home-manager/alacritty/alacritty.yml"
+# )
 keys = [
+    # Key([ALT], RETURN, lazy.spawn(f"alacritty --config-file {ALACRITTY_CUSTOM}")),
     Key([ALT], RETURN, lazy.spawn("alacritty")),
     Key([ALT], "b", lazy.spawn("brave")),
     Key([CONTROL], "q", lazy.window.kill()),

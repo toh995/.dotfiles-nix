@@ -23,7 +23,7 @@ function bufferline.configure()
 		options = {
 			mode = "tabs",
 			separator_style = "padded_slant",
-			buffer_close_icon = "",
+			buffer_close_icon = "x",
 			offsets = {
 				{
 					filetype = "NvimTree",

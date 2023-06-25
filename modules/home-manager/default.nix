@@ -64,8 +64,9 @@ in
 
       # powerlevel10k, font
       zsh-powerlevel10k
-      meslo-lgs-nf
-      #(pkgs.nerdfonts.override { fonts = [ "BigBlueTerminal" ]; })
+      # meslo-lgs-nf
+      # (pkgs.nerdfonts.override { fonts = [ "AnonymousPro" "CascadiaCode" "DroidSansMono" "FiraCode" "Monoid" "RobotoMono" "SpaceMono" "UbuntuMono" "VictorMono"]; })
+      (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
 
       # Neovim
       neovim
