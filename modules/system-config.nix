@@ -23,23 +23,29 @@
   programs.hyprland.enable = true;
 
   # Enable qtile
-  services.xserver.enable = true;
-  services.xserver.windowManager.qtile = {
+  services.xserver = {
     enable = true;
-    backend = "x11";
-    # backend = "wayland";
-    # configFile = "${config.users.users.toh995.home}/.dotfiles-nix/modules/home-manager/qtile/config.py";
-  };
-  services.xserver.displayManager = {
-    defaultSession="none+qtile";
-    autoLogin = {
+    autoRepeatDelay = 200;
+    autoRepeatInterval = 25;
+
+    windowManager.qtile = {
       enable = true;
-      user = "toh995";
+      backend = "x11";
+      # backend = "wayland";
+      # configFile = "${config.users.users.toh995.home}/.dotfiles-nix/modules/home-manager/qtile/config.py";
     };
-    lightdm = {
-      enable = true;
-      greeter.enable = false;
-      autoLogin.timeout = 0;
+
+    displayManager = {
+      defaultSession="none+qtile";
+      autoLogin = {
+        enable = true;
+        user = "toh995";
+      };
+      lightdm = {
+        enable = true;
+        greeter.enable = false;
+        autoLogin.timeout = 0;
+      };
     };
   };
 

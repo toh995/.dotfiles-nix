@@ -1,4 +1,5 @@
 from libqtile import bar, hook, layout, qtile, widget
+from libqtile.backend.wayland import InputConfig
 from libqtile.config import Group, Key, Screen
 from libqtile.lazy import lazy
 
@@ -49,6 +50,8 @@ def on_startup() -> None:
 # Move the cursor, when changing focus
 cursor_warp = True
 
+wl_input_rules = {"type:keyboard": InputConfig(kb_repeat_delay=200, kb_repeat_rate=25)}
+
 layouts = [
     layout.MonadTall(
         border_width=1,
@@ -91,6 +94,7 @@ screens = [
 # ALACRITTY_CUSTOM = (
 #     f"{os.environ['HOME']}/.dotfiles-nix/modules/home-manager/alacritty/alacritty.yml"
 # )
+
 keys = [
     # Key([ALT], RETURN, lazy.spawn(f"alacritty --config-file {ALACRITTY_CUSTOM}")),
     Key([ALT], RETURN, lazy.spawn("alacritty")),
