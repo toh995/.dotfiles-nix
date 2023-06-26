@@ -98,7 +98,8 @@ in
       # nodePackages.pyright # type-checker
       python311Packages.python-lsp-server
       ruff # linter
-      python311Packages.ruff-lsp
+      # TODO: get this working again
+      # python311Packages.ruff-lsp
 
       # build dependencies
       gcc # for nvim-treesitter
