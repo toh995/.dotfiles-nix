@@ -1,0 +1,14 @@
+# vim: filetype=cfg
+
+[global]
+  # Show the notification on the currently focused screen
+  follow = mouse
+
+  # Whether to show a progress bar, for integer hints
+  progress_bar = true
+
+  # Position for where the notification should be displayed
+  origin = "top-right"
+
+  # Rounded corners
+  corner_radius = 10

@@ -1,7 +1,6 @@
 from enum import Enum, auto
 
 from libqtile.core.manager import Qtile
-from libqtile.log_utils import logger
 
 from user_config import NUM_GROUPS_PER_SCREEN, NUM_SCREENS
 from utils import curry
@@ -21,8 +20,6 @@ GROUP_IDS = tuple(range(NUM_SCREENS * NUM_GROUPS_PER_SCREEN))
 GROUP_NAMES = tuple(str(i) for i in GROUP_IDS)
 
 SCREEN_IDS = tuple(range(NUM_SCREENS))
-
-logger.warn(GROUP_NAMES)
 
 
 ###########
@@ -92,7 +89,6 @@ def get_next_screen_id(direction: Direction, qtile: Qtile) -> int | None:
 def focus_screen(direction: Direction, qtile: Qtile) -> None:
     next_screen_id = get_next_screen_id(direction, qtile)
     qtile.cmd_to_screen(next_screen_id)
-    qtile.current_screen.window.focus(warp=True)
 
 
 @curry

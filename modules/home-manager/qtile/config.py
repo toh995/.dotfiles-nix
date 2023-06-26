@@ -1,3 +1,5 @@
+import os
+
 from libqtile import bar, hook, layout, qtile, widget
 from libqtile.backend.wayland import InputConfig
 from libqtile.config import Group, Key, Screen
@@ -15,7 +17,12 @@ from screens_groups import (
     move_to_group,
     SCREEN_IDS,
 )
-from user_config import BAR_FONT_SIZE, WALLPAPER_PATH
+from user_config import (
+    BAR_FONT_SIZE,
+    VOLUME_NOTIFY_EXPIRE_TIME,
+    VOLUME_STEP_PERCENT,
+    WALLPAPER_PATH,
+)
 
 # from libqtile.log_utils import logger
 
@@ -29,6 +36,9 @@ RETURN = "Return"
 SHIFT = "shift"
 SUPER = "mod4"
 TAB = "Tab"
+VOL_DOWN = "XF86AudioLowerVolume"
+VOL_MUTE = "XF86AudioMute"
+VOL_UP = "XF86AudioRaiseVolume"
 
 
 ##########
@@ -43,6 +53,11 @@ def on_startup() -> None:
             warp=False,
         )
         screen.previous_group = None
+
+    # start dunst as a background process
+    os.system("dunst &")
+    # os.system("dunst -config ~/.dotfiles-nix/modules/home-manager/dunst/dunstrc &")
+
     # start eww (currently unneeded, using the built-in bar instead)
     # os.system("eww open bar")
 
@@ -60,11 +75,10 @@ layouts = [
     )
 ]
 
-groups = [Group(name, label="󰏃") for name in GROUP_NAMES]
+groups = [Group(name, label="●") for name in GROUP_NAMES]
 
 screens = [
     Screen(
-        # wallpaper="~/downloads/wallpaperflare.com_wallpaper (1).jpg",
         wallpaper=WALLPAPER_PATH,
         wallpaper_mode="fill",
         top=bar.Bar(
@@ -90,12 +104,12 @@ screens = [
     for screen_id in SCREEN_IDS
 ]
 
-# import os
 # ALACRITTY_CUSTOM = (
 #     f"{os.environ['HOME']}/.dotfiles-nix/modules/home-manager/alacritty/alacritty.yml"
 # )
 
 keys = [
+    # Open default apps
     # Key([ALT], RETURN, lazy.spawn(f"alacritty --config-file {ALACRITTY_CUSTOM}")),
     Key([ALT], RETURN, lazy.spawn("alacritty")),
     Key([ALT], "b", lazy.spawn("brave")),
@@ -143,4 +157,60 @@ keys = [
     # Reload
     Key([SUPER, CONTROL], "r", lazy.reload_config(), desc="Reload the config"),
     Key([SUPER, CONTROL], "q", lazy.shutdown(), desc="Shutdown Qtile"),
+    # Sound control
+    Key(
+        [],
+        VOL_UP,
+        lazy.spawn(
+            f"""
+            pactl set-sink-volume @DEFAULT_SINK@ +{VOLUME_STEP_PERCENT}%
+
+            if [[ $(pamixer --get-mute) == "true" ]]; then
+                pactl set-sink-mute @DEFAULT_SINK@ toggle
+            fi
+
+            notify-send "󰕾 Volume:" \
+                --hint=int:value:$(pamixer --get-volume) \
+                --expire-time={VOLUME_NOTIFY_EXPIRE_TIME}
+            """,
+            shell=True,
+        ),
+    ),
+    Key(
+        [],
+        VOL_DOWN,
+        lazy.spawn(
+            f"""
+            pactl set-sink-volume @DEFAULT_SINK@ -{VOLUME_STEP_PERCENT}%
+
+            if [[ $(pamixer --get-mute) == "true" ]]; then
+                pactl set-sink-mute @DEFAULT_SINK@ toggle
+            fi
+
+            notify-send "󰕾 Volume:" \
+                --hint=int:value:$(pamixer --get-volume) \
+                --expire-time={VOLUME_NOTIFY_EXPIRE_TIME}
+            """,
+            shell=True,
+        ),
+    ),
+    Key(
+        [],
+        VOL_MUTE,
+        lazy.spawn(
+            f"""
+            pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+            if [[ $(pamixer --get-mute) == "true" ]]; then
+                vol=0
+            else
+                vol=$(pamixer --get-volume)
+            fi
+            notify-send "󰕾 Volume:" \
+                --hint=int:value:$vol \
+                --expire-time={VOLUME_NOTIFY_EXPIRE_TIME}
+            """,
+            shell=True,
+        ),
+    ),
 ]

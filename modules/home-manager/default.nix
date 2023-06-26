@@ -41,6 +41,7 @@ in
       # Window manager
       # eww-wayland
       hyprland
+      dunst
 
       # GUI programs
       alacritty
@@ -61,6 +62,10 @@ in
       trash-cli
       youtube-dl
       zoxide
+
+      # CLI utils
+      libnotify # send notifications
+      pamixer # introspect on sound
 
       # powerlevel10k, font
       zsh-powerlevel10k
@@ -105,6 +110,7 @@ in
       ./alacritty
       ./bash
       ./brave
+      ./dunst
       ./eww
       ./git
       ./hyprland
