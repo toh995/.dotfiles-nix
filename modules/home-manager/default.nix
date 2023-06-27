@@ -67,6 +67,7 @@ in
       # CLI utils
       libnotify # send notifications
       pamixer # introspect on sound
+      xdg-utils # xdg-open
 
       # powerlevel10k, font
       zsh-powerlevel10k
@@ -103,7 +104,11 @@ in
       # python311Packages.ruff-lsp
 
       # build dependencies
-      gcc # for nvim-treesitter
+      # for nvim-treesitter
+      gcc
+      # for markdown-preview
+      nodejs_20
+      yarn
 
       # todo: spotify-tui??
     ];
