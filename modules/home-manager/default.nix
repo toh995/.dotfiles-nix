@@ -46,6 +46,7 @@ in
       # GUI programs
       alacritty
       brave
+      keepassxc
 
       # CLI programs
       btop
