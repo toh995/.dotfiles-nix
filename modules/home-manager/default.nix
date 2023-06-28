@@ -58,7 +58,7 @@ in
       neofetch
       nnn
       ripgrep
-      tldr
+      tealdeer
       tmux
       trash-cli
       youtube-dl
@@ -125,6 +125,7 @@ in
       ./nvim
       ./python
       ./qtile
+      ./tealdeer
       ./tmux
       ./xdg
       ./zsh
