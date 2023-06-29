@@ -58,6 +58,7 @@ in
       neofetch
       nnn
       ripgrep
+      spotify-player
       tealdeer
       tmux
       trash-cli
@@ -109,8 +110,6 @@ in
       # for markdown-preview
       nodejs_20
       yarn
-
-      # todo: spotify-tui??
     ];
 
     imports = [
@@ -125,6 +124,7 @@ in
       ./nvim
       ./python
       ./qtile
+      ./spotify-player
       ./tealdeer
       ./tmux
       ./xdg

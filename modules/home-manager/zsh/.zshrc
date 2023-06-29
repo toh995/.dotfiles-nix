@@ -35,6 +35,9 @@ alias n="nvim ."
 # nnn
 export NNN_OPTS="H"
 
+# spotify_player
+alias spt="spotify_player"
+
 # tmux
 alias ta="tmux attach-session -t"
 alias tls="tmux ls"

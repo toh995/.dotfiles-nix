@@ -1,0 +1,5 @@
+pause_icon = "󰏤"
+border_type = "Rounded"
+
+[device]
+volume = 100
