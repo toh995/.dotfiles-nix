@@ -47,6 +47,7 @@ in
       alacritty
       brave
       keepassxc
+      kitty
 
       # CLI programs
       btop
@@ -120,6 +121,7 @@ in
       ./eww
       ./git
       ./hyprland
+      ./kitty
       ./lazygit
       ./nvim
       ./python
