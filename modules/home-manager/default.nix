@@ -46,6 +46,7 @@ in
       # GUI programs
       alacritty
       brave
+      firefox
       keepassxc
 
       # CLI programs
@@ -117,6 +118,7 @@ in
       ./brave
       ./dunst
       ./eww
+      ./firefox
       ./git
       ./hyprland
       ./lazygit

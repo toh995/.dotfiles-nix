@@ -2,7 +2,7 @@
 ## Install neovim packages
 Simply open up neovim. All packages/dependencies will be auto-installed.
 
-## Set up the web browser
+## Set up the web browsers (brave + firefox)
 - Set dark mode
 - Set the default search engine
 - Change the download folder
