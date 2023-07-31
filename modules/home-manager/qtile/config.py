@@ -65,6 +65,8 @@ def on_startup() -> None:
 # Move the cursor, when changing focus
 cursor_warp = True
 
+focus_on_window_activation = "focus"
+
 wl_input_rules = {"type:keyboard": InputConfig(kb_repeat_delay=200, kb_repeat_rate=25)}
 
 layouts = [
