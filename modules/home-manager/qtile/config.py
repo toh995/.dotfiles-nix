@@ -92,6 +92,7 @@ screens = [
                     inactive=colors.WHITE,
                     fontsize=BAR_FONT_SIZE,
                 ),
+                widget.CurrentScreen(),
                 widget.Spacer(),
                 widget.ThermalZone(high=50, crit=80, fontsize=BAR_FONT_SIZE),
                 widget.Sep(padding=20),
