@@ -1,0 +1,39 @@
+// vim: filetype=rasi
+
+/* KEYBINDINGS */
+configuration {
+  kb-row-down: "Down,Control+j";
+  kb-row-up: "Up,Control+k,Shift+Tab,Shift+ISO_Left_Tab";
+  kb-accept-entry: "Return,KP_Enter";
+  kb-remove-to-eol: "Control+Shift+e";
+}
+
+/* THEME */
+//@theme "arthur"
+@theme "DarkBlue"
+
+window {
+  border-radius: 10px;
+}
+inputbar {
+  border-radius:  15px 15px 0px 0px;
+}
+listview {
+  border-radius: 0px 0px 15px 15px;
+}
+element {
+  border-radius: 4px;
+}
+button {
+  border-radius: 4px 0px 0px 4px;
+}
+
+// remove the "drun:" prompt text
+configuration {
+  drun {
+    display-name: "";
+  }
+}
+textbox-prompt-colon {
+  str: "";
+}

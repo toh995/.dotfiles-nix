@@ -48,6 +48,7 @@ in
       brave
       firefox
       keepassxc
+      rofi
 
       # CLI programs
       btop
@@ -125,6 +126,7 @@ in
       ./nvim
       ./python
       ./qtile
+      ./rofi
       ./spotify-player
       ./tealdeer
       ./tmux

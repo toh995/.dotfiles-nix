@@ -34,6 +34,7 @@ ALT = "mod1"
 CONTROL = "control"
 RETURN = "Return"
 SHIFT = "shift"
+SPACE = "space"
 SUPER = "mod4"
 TAB = "Tab"
 VOL_DOWN = "XF86AudioLowerVolume"
@@ -107,15 +108,19 @@ screens = [
     for screen_id in SCREEN_IDS
 ]
 
-# ALACRITTY_CUSTOM = (
+# ALACRITTY_CFG = (
 #     f"{os.environ['HOME']}/.dotfiles-nix/modules/home-manager/alacritty/alacritty.yml"
 # )
+# ROFI_CFG = f"{os.environ['HOME']}/.dotfiles-nix/modules/home-manager/rofi/config.rasi"
 
 keys = [
     # Open default apps
-    # Key([ALT], RETURN, lazy.spawn(f"alacritty --config-file {ALACRITTY_CUSTOM}")),
+    # Key([ALT], RETURN, lazy.spawn(f"alacritty --config-file {ALACRITTY_CFG}")),
     Key([ALT], RETURN, lazy.spawn("alacritty")),
     Key([ALT], "b", lazy.spawn("brave")),
+    # Key([ALT], SPACE, lazy.spawn(f"rofi -show-icons -show drun -config {ROFI_CFG}")),
+    Key([ALT], SPACE, lazy.spawn("rofi -show-icons -show drun")),
+    # Close current window
     Key([CONTROL], "q", lazy.window.kill()),
     # Change focus to the next window (same screen)
     Key([ALT, SUPER], "h", lazy.layout.left()),
