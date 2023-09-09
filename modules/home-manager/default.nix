@@ -35,14 +35,12 @@ in
     # Allow font installations
     fonts.fontconfig.enable = true;
 
-    home.packages = with pkgs; [
-      # Window manager
-      # eww-wayland
-      dunst
 
+    home.packages = with pkgs; [
       # GUI programs
       alacritty
       brave
+      dunst
       firefox
       keepassxc
       rofi
@@ -117,7 +115,6 @@ in
       ./bash
       ./brave
       ./dunst
-      ./eww
       ./firefox
       ./git
       ./lazygit

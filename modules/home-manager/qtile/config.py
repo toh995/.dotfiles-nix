@@ -61,9 +61,6 @@ def on_startup() -> None:
 
     os.system("udiskie &")
 
-    # start eww (currently unneeded, using the built-in bar instead)
-    # os.system("eww open bar")
-
 
 # Move the cursor, when changing focus
 cursor_warp = True
