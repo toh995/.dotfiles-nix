@@ -19,9 +19,6 @@
   # Enable flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  # Enable hyprland
-  programs.hyprland.enable = true;
-
   # Enable qtile
   services.xserver = {
     enable = true;

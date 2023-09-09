@@ -13,17 +13,15 @@ in
 
     programs.home-manager.enable = true;
 
-    # Auto-start hyprland on login
+    # Auto-start qtile on login
     programs.zsh = {
       enable = true;
-      profileExtra = ''
-        if [ -z $DISPLAY ] && [ $XDG_VTNR -eq 1 ]; then
-          # ${pyEnv}/bin/qtile start -b wayland
-          # ${pyEnv}/bin/qtile start -b wayland --config $HOME/.dotfiles-nix/modules/home-manager/qtile/config.py
-          # exec Hyprland
-          # exec Hyprland --config $HOME/.dotfiles-nix/modules/home-manager/hyprland/hyprland.conf
-        fi
-      '';
+      # profileExtra = ''
+      #   if [ -z $DISPLAY ] && [ $XDG_VTNR -eq 1 ]; then
+      #     ${pyEnv}/bin/qtile start -b wayland
+      #     ${pyEnv}/bin/qtile start -b wayland --config $HOME/.dotfiles-nix/modules/home-manager/qtile/config.py
+      #   fi
+      # '';
     };
 
     # Set some default env vars
@@ -40,7 +38,6 @@ in
     home.packages = with pkgs; [
       # Window manager
       # eww-wayland
-      hyprland
       dunst
 
       # GUI programs
@@ -123,7 +120,6 @@ in
       ./eww
       ./firefox
       ./git
-      ./hyprland
       ./lazygit
       ./nvim
       ./python
