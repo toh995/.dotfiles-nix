@@ -55,9 +55,11 @@ def on_startup() -> None:
         )
         screen.previous_group = None
 
-    # start dunst as a background process
+    # start some background processes
     os.system("dunst &")
     # os.system("dunst -config ~/.dotfiles-nix/modules/home-manager/dunst/dunstrc &")
+
+    os.system("udiskie &")
 
     # start eww (currently unneeded, using the built-in bar instead)
     # os.system("eww open bar")

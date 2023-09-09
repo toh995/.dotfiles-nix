@@ -50,6 +50,8 @@ in
       keepassxc
       rofi
 
+      udiskie
+
       # CLI programs
       btop
       delta
@@ -130,6 +132,7 @@ in
       ./spotify-player
       ./tealdeer
       ./tmux
+      ./udiskie
       ./xdg
       ./zsh
     ];

@@ -60,6 +60,9 @@
     jack.enable = true;
   };
 
+  # Enable udisks
+  services.udisks2.enable = true;
+
   # Enable zsh
   programs.zsh.enable = true;
   environment.shells = [ pkgs.zsh ];
