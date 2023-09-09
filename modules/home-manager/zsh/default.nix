@@ -5,7 +5,7 @@
     enable = true;
     enableAutosuggestions = true;
     enableCompletion = true;
-    syntaxHighlighting.enable = true;
+    enableSyntaxHighlighting = true;
 
     dotDir = ".config/zsh";
     history.path = "${config.xdg.stateHome}/zsh/.zsh_history";

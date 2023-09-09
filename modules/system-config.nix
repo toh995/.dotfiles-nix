@@ -31,7 +31,6 @@
     windowManager.qtile = {
       enable = true;
       backend = "x11";
-      package = pkgs.stable.qtile;
       # backend = "wayland";
       # configFile = "${config.users.users.toh995.home}/.dotfiles-nix/modules/home-manager/qtile/config.py";
     };

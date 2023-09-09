@@ -103,7 +103,7 @@ in
       # nodePackages.pyright # type-checker
       python311Packages.python-lsp-server
       ruff # linter
-      ruff-lsp
+      python311Packages.ruff-lsp
 
       # build dependencies
       # for nvim-treesitter
