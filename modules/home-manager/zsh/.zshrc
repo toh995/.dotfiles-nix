@@ -4,7 +4,8 @@
 set -o noclobber
 set -o pipefail
 
-alias ls="ls -1a"
+# alias ls="ls -1AF --color=auto"
+alias ls="eza -1aF"
 
 help() {
   local -r command=$1

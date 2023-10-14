@@ -50,6 +50,7 @@ in
       # CLI programs
       btop
       delta
+      eza
       git
       lazydocker
       lazygit
