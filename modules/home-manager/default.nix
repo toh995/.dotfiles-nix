@@ -90,6 +90,9 @@ in
       #
       # So we'll install the language servers and formatters here.
 
+      # formatter
+      efm-langserver
+
       # lua
       lua-language-server
       stylua
