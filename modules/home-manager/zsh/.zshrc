@@ -29,6 +29,7 @@ export LESS_TERMCAP_so="${bg_bold[yellow]}${fg_bold[black]}"
 export LESS_TERMCAP_se="${reset_color}"
 export LESS_TERMCAP_us="${fg_bold[green]}"
 export LESS_TERMCAP_ue="${reset_color}"
+export GROFF_NO_SGR=1
 
 # neovim
 alias n="nvim ."

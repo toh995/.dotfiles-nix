@@ -28,6 +28,7 @@ in
     home.sessionVariables = {
       BROWSER = "brave";
       EDITOR = "nvim";
+      MANPAGER = "less";
       PAGER = "less";
       VISUAL = "nvim";
     };
