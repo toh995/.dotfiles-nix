@@ -21,4 +21,10 @@ cd .dotfiles-nix
 cp /etc/nixos/hardware-configuration.nix ./modules/hardware-config.nix
 ```
 
+## Clone neovim config
+```bash
+cd $HOME/.config
+git clone git@github.com:toh995/nvim.git
+```
+
 ## Clone secrets to $XDG_DATA_HOME

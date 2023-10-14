@@ -118,7 +118,6 @@ in
       ./firefox
       ./git
       ./lazygit
-      ./nvim
       ./python
       ./qtile
       ./rofi
