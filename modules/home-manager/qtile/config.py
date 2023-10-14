@@ -170,11 +170,10 @@ keys = [
         VOL_UP,
         lazy.spawn(
             f"""
-            pactl set-sink-volume @DEFAULT_SINK@ +{VOLUME_STEP_PERCENT}%
+            wpctl set-volume @DEFAULT_SINK@ {VOLUME_STEP_PERCENT}%+
 
-            if [[ $(pamixer --get-mute) == "true" ]]; then
-                pactl set-sink-mute @DEFAULT_SINK@ toggle
-            fi
+            # un-mute
+            wpctl set-mute @DEFAULT_SINK@ 0
 
             notify-send "󰕾 Volume:" \
                 --hint=int:value:$(pamixer --get-volume) \
@@ -188,11 +187,10 @@ keys = [
         VOL_DOWN,
         lazy.spawn(
             f"""
-            pactl set-sink-volume @DEFAULT_SINK@ -{VOLUME_STEP_PERCENT}%
+            wpctl set-volume @DEFAULT_SINK@ {VOLUME_STEP_PERCENT}%-
 
-            if [[ $(pamixer --get-mute) == "true" ]]; then
-                pactl set-sink-mute @DEFAULT_SINK@ toggle
-            fi
+            # un-mute
+            wpctl set-mute @DEFAULT_SINK@ 0
 
             notify-send "󰕾 Volume:" \
                 --hint=int:value:$(pamixer --get-volume) \
@@ -206,7 +204,7 @@ keys = [
         VOL_MUTE,
         lazy.spawn(
             f"""
-            pactl set-sink-mute @DEFAULT_SINK@ toggle
+            wpctl set-mute @DEFAULT_SINK@ toggle
 
             if [[ $(pamixer --get-mute) == "true" ]]; then
                 vol=0
