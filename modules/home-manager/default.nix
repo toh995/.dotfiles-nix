@@ -78,6 +78,7 @@ in
       (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
 
       # Neovim
+      vim
       neovim
       # NOTE:
       # Normally, we would use mason.nvim to install
