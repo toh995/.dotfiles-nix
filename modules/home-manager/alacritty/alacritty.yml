@@ -12,6 +12,16 @@ font:
     # family: "RobotoMonoNerdFont"
     # family: "SpaceMonoNerdFont"
 
+    # For borland
+    # family: "BigBlueTermPlusNerdFont"
+    # family: "GohuFontuni14NerdFont"
+
+# For borland
+# colors:
+#   primary:
+#     background: "#003078" # blue
+#     foreground: "#ffff57" # yellow
+
 cursor:
   style:
     shape: Block
