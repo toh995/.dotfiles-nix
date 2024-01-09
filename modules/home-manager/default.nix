@@ -97,6 +97,11 @@ in
       # formatter
       efm-langserver
 
+      # haskell
+      cabal-install
+      ghc
+      haskell-language-server
+      haskellPackages.fourmolu
       # lua
       lua-language-server
       stylua
