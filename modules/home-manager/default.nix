@@ -53,6 +53,7 @@ in
       delta
       eza
       git
+      gnumake
       lazydocker
       lazygit
       mpv
