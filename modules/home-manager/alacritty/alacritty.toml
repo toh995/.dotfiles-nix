@@ -8,9 +8,8 @@ normal.family = "HackNerdFont"
 
 [cursor]
 blink_interval = 500
-style.blinking = "Always"
 style.shape = "Block"
+style.blinking = "Always"
 
-[window.padding]
-x = 7
-y = 7
+[window]
+padding = { x = 7, y = 7 }
