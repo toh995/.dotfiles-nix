@@ -36,6 +36,18 @@ in
     # Allow font installations
     fonts.fontconfig.enable = true;
 
+    # Set mouse cursor
+    home.pointerCursor = {
+      # package = pkgs.catppuccin-cursors.mochaDark;
+      # name = "Catppuccin-Mocha-Dark-Cursors";
+      # package = pkgs.phinger-cursors;
+      # name = "phinger-cursors";
+      # size = 32;
+      package = pkgs.apple-cursor;
+      name = "macOS-Monterey";
+      size = 24;
+      gtk.enable = true;
+    };
 
     home.packages = with pkgs; [
       # GUI programs
