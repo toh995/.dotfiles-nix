@@ -1,0 +1,16 @@
+import = [
+  "~/.config/alacritty/colorschemes/catppuccin-mocha.toml",
+]
+
+[font]
+size = 15
+normal.family = "HackNerdFont"
+
+[cursor]
+blink_interval = 500
+style.blinking = "Always"
+style.shape = "Block"
+
+[window.padding]
+x = 7
+y = 7
