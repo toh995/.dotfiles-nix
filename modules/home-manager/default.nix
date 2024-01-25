@@ -125,12 +125,14 @@ in
       ruff # linter
       ruff-lsp
 
-      # build dependencies
+      # nvim build dependencies
       # for nvim-treesitter
       gcc
       # for markdown-preview
       nodejs_20
       yarn
+      # for fzf
+      gnumake
     ];
 
     imports = [
