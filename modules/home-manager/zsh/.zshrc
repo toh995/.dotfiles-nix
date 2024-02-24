@@ -41,7 +41,14 @@ export NNN_OPTS="H"
 alias spt="spotify_player"
 
 # tmux
-alias ta="tmux attach-session -t"
+ta() {
+	local -r session_name="${1}"
+  if [[ -z "${session_name}" ]]; then
+    tmux attach-session
+  else
+    tmux attach-session -t "${session_name}"
+  fi
+}
 alias tls="tmux ls"
 alias tn="tmux new-session -s"
 
