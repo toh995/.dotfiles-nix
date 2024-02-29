@@ -86,8 +86,8 @@ in
       # powerlevel10k, font
       zsh-powerlevel10k
       # meslo-lgs-nf
-      # (pkgs.nerdfonts.override { fonts = [ "AnonymousPro" "CascadiaCode" "DroidSansMono" "FiraCode" "Monoid" "RobotoMono" "SpaceMono" "UbuntuMono" "VictorMono"]; })
-      (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+      (pkgs.nerdfonts.override { fonts = [ "DejaVuSansMono" ]; })
+      # nerdfonts
 
       # Neovim
       vim

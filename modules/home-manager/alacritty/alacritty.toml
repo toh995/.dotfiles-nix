@@ -3,8 +3,33 @@ import = [
 ]
 
 [font]
-size = 15
-normal.family = "HackNerdFont"
+size = 14
+# normal.family = "HackNerdFont"
+# normal.family = "CommitMonoNerdFont"
+
+# size = 16
+# normal.family = "UbuntuMono Nerd Font Propo"
+
+# normal.family = "CousineNerdFont"
+
+# normal.family = "GoMonoNerdFont"
+
+
+# normal.family = "LiterationMonoNerdFont"
+
+# normal.family = "MesloLGSDZNerdFont"
+
+# normal.family = "SauceCodeProNerdFont"
+# normal.family = "CodeNewRoman Nerd Font"
+
+# normal.family = "OverpassM Nerd Font"
+# normal.family = "SpaceMono Nerd Font"
+
+# normal.family = "BlexMono Nerd Font"
+normal.family = "DejaVuSansM Nerd Font Propo"
+
+# normal.family = "iMWritingMono Nerd Font"
+# normal.family = "IntoneMono Nerd Font"
 
 [cursor]
 blink_interval = 500
