@@ -35,6 +35,3 @@ normal.family = "DejaVuSansM Nerd Font Propo"
 blink_interval = 500
 style.shape = "Block"
 style.blinking = "Always"
-
-[window]
-padding = { x = 7, y = 7 }
