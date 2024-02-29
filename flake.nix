@@ -10,12 +10,17 @@
     nur.url = "github:nix-community/NUR";
   };
 
-  outputs = { home-manager, nixpkgs, nur, ... }: {
+  outputs = {
+    home-manager,
+    nixpkgs,
+    nur,
+    ...
+  }: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
         nur.nixosModules.nur
-        { nixpkgs.overlays = [nur.overlay]; }
+        {nixpkgs.overlays = [nur.overlay];}
         ./modules/hardware-config.nix
         ./modules/system-config.nix
         home-manager.nixosModules.home-manager

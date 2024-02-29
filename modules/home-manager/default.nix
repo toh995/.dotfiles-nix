@@ -1,9 +1,6 @@
-{ pkgs, ... }:
-
-let pyEnv = pkgs.python3.withPackages (p: [pkgs.qtile-unwrapped]);
-
-in
-{
+{pkgs, ...}: let
+  pyEnv = pkgs.python3.withPackages (p: [pkgs.qtile-unwrapped]);
+in {
   home-manager.useGlobalPkgs = true;
   home-manager.useUserPackages = true;
 
@@ -86,7 +83,7 @@ in
       # powerlevel10k, font
       zsh-powerlevel10k
       # meslo-lgs-nf
-      (pkgs.nerdfonts.override { fonts = [ "DejaVuSansMono" ]; })
+      (pkgs.nerdfonts.override {fonts = ["DejaVuSansMono"];})
       # nerdfonts
 
       # Neovim
@@ -96,7 +93,7 @@ in
       # Normally, we would use mason.nvim to install
       # language servers and formatters.
       #
-      # In particular, mason.nvim will download binaries for each 
+      # In particular, mason.nvim will download binaries for each
       # language server and formatter.
       #
       # HOWEVER, this is problematic for NixOS - generally speaking,

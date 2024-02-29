@@ -1,6 +1,4 @@
-{ pkgs, ... }:
-
-{
+{pkgs, ...}: {
   programs.firefox.enable = true;
   programs.firefox.profiles.toh995 = {
     isDefault = true;

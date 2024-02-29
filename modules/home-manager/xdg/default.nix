@@ -1,6 +1,5 @@
-{ config, ... }:
-
-let home = config.home.homeDirectory;
+{config, ...}: let
+  home = config.home.homeDirectory;
 in {
   xdg = {
     enable = true;
@@ -11,8 +10,8 @@ in {
     stateHome = "${home}/.local/state";
 
     systemDirs = {
-      config = [ "/etc/xdg" ];
-      data = [ "/usr/share" "/usr/local/share" ];
+      config = ["/etc/xdg"];
+      data = ["/usr/share" "/usr/local/share"];
     };
   };
 }

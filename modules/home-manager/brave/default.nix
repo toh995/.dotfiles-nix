@@ -1,11 +1,10 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   programs.chromium = {
     enable = true;
     package = pkgs.brave;
     extensions = [
-      { id = "cjpalhdlnbpafiamejdnhcphjbkeiagm"; } # ublock origin
-      { id = "dbepggeogbaibhgnhhndojpepiihcmeb"; } # vimium
+      {id = "cjpalhdlnbpafiamejdnhcphjbkeiagm";} # ublock origin
+      {id = "dbepggeogbaibhgnhhndojpepiihcmeb";} # vimium
     ];
   };
 }
