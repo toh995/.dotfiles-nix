@@ -117,6 +117,7 @@ in
       lua-language-server
       stylua
       # nix
+      alejandra
       nil
       # python
       black # formatter
