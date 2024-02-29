@@ -33,5 +33,5 @@ normal.family = "DejaVuSansM Nerd Font Propo"
 
 [cursor]
 blink_interval = 500
-style.shape = "Block"
+style.shape = "Beam"
 style.blinking = "Always"

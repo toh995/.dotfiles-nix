@@ -55,6 +55,9 @@ alias tn="tmux new-session -s"
 # zoxide
 eval "$(zoxide init zsh)"
 alias j="z"
+
+# zsh vi-mode
+export ZVM_VI_INSERT_ESCAPE_BINDKEY=kj
 #########################
 # End custom zsh config #
 #########################

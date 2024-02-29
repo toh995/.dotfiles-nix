@@ -80,6 +80,8 @@ in {
       pamixer # introspect on sound
       xdg-utils # xdg-open
 
+      # zsh
+      zsh-vi-mode
       # powerlevel10k, font
       zsh-powerlevel10k
       # meslo-lgs-nf

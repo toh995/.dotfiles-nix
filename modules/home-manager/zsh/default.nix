@@ -16,8 +16,14 @@
     # Here we append some custom stuff to the generated .zshrc
     initExtra = builtins.readFile ./.zshrc;
 
-    # enable powerlevel10k
     plugins = [
+      # vi mode
+      {
+        name = "vi-mode";
+        src = pkgs.zsh-vi-mode;
+        file = "share/zsh-vi-mode/zsh-vi-mode.plugin.zsh";
+      }
+      # powerlevel10k
       {
         name = "powerlevel10k";
         src = pkgs.zsh-powerlevel10k;
