@@ -18,6 +18,7 @@ from screens_groups import (
     SCREEN_IDS,
 )
 from user_config import (
+    BAR_FONT_NAME,
     BAR_FONT_SIZE,
     VOLUME_NOTIFY_EXPIRE_TIME,
     VOLUME_STEP_PERCENT,
@@ -91,14 +92,18 @@ screens = [
                     active=colors.WHITE,
                     inactive=colors.WHITE,
                     fontsize=BAR_FONT_SIZE,
+                    font=BAR_FONT_NAME,
                 ),
-                widget.CurrentScreen(),
+                widget.CurrentScreen(font=BAR_FONT_NAME),
                 widget.Spacer(),
-                widget.ThermalZone(high=50, crit=80, fontsize=BAR_FONT_SIZE),
+                widget.ThermalZone(
+                    high=50, crit=80, fontsize=BAR_FONT_SIZE, font=BAR_FONT_NAME
+                ),
                 widget.Sep(padding=20),
                 widget.Clock(
                     format="%a %b %d, %I:%M %P",
                     fontsize=BAR_FONT_SIZE,
+                    font=BAR_FONT_NAME,
                 ),
             ],
             30,

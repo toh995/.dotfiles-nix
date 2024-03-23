@@ -7,6 +7,7 @@ Simply open up neovim. All packages/dependencies will be auto-installed.
 - Set the default search engine
 - Change the download folder
 - Customize the start page
+- Change default fonts (go to `brave://settings/fonts`)
 
 ## Set up GitHub ssh
 Follow the instructions at https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent

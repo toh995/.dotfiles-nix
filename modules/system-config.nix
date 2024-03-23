@@ -59,6 +59,31 @@
     jack.enable = true;
   };
 
+  # fonts
+  fonts = {
+    packages = with pkgs; [
+      # fonts
+      noto-fonts
+      noto-fonts-lgc-plus
+      noto-fonts-cjk-sans
+      noto-fonts-cjk-serif
+      noto-fonts-color-emoji
+      noto-fonts-emoji-blob-bin
+      noto-fonts-monochrome-emoji
+      (pkgs.nerdfonts.override {fonts = ["DejaVuSansMono"];})
+      # nerdfonts
+    ];
+    fontconfig = {
+      enable = true;
+      defaultFonts = {
+        serif = ["Noto Serif"];
+        sansSerif = ["Noto Sans"];
+        monospace = ["Noto Sans Mono"];
+        emoji = ["Noto Color Emoji"];
+      };
+    };
+  };
+
   # Enable udisks
   services.udisks2.enable = true;
 
