@@ -61,6 +61,7 @@ in {
       btop
       delta
       eza
+      fzf
       git
       lazydocker
       lazygit
@@ -116,8 +117,8 @@ in {
       lua-language-server
       stylua
       # nix
-      alejandra
-      nil
+      alejandra # formatter
+      nil # lsp
       # python
       black # formatter
       # nodePackages.pyright # type-checker
@@ -131,7 +132,7 @@ in {
       # for markdown-preview
       nodejs_20
       yarn
-      # for fzf
+      # for telescope fzf
       gnumake
     ];
 
@@ -149,6 +150,7 @@ in {
       ./spotify-player
       ./tealdeer
       ./tmux
+      ./tmux-session-wizard
       ./udiskie
       ./xdg
       ./zsh
