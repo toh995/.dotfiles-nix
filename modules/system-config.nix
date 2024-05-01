@@ -22,6 +22,10 @@
   # Enable flakes
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
+  # Enable dconf (needed for gtk)
+  # https://discourse.nixos.org/t/error-gdbus-error-org-freedesktop-dbus-error-serviceunknown-the-name-ca-desrt-dconf-was-not-provided-by-any-service-files/29111
+  programs.dconf.enable = true;
+
   # Enable qtile
   services.xserver = {
     enable = true;
