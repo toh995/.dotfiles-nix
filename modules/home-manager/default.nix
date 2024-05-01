@@ -111,6 +111,11 @@ in {
       # formatter
       efm-langserver
 
+      # go
+      # delve
+      # golangci-lint
+      # golangci-lint-langserver
+      # gopls
       # haskell
       cabal-install
       ghc

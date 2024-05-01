@@ -19,6 +19,11 @@ help() {
   bash <<< "help $command | less"
 }
 
+# go
+export GOPATH="${XDG_DATA_HOME}/go"
+export GOMODCACHE="${XDG_CACHE_HOME}/go/mod"
+export PATH="${GOPATH}/bin:${PATH}"
+
 # lazydocker
 alias ld="lazydocker"
 
