@@ -64,10 +64,12 @@ in {
       fzf
       git
       lazydocker
+      kopia
       lazygit
       mpv
       neofetch
       nnn
+      rclone
       ripgrep
       spotify-player
       tealdeer
@@ -147,10 +149,10 @@ in {
       ./python
       ./qtile
       ./rofi
+      ./scripts
       ./spotify-player
       ./tealdeer
       ./tmux
-      ./tmux-session-wizard
       ./udiskie
       ./xdg
       ./zsh
