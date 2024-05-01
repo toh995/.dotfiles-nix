@@ -110,7 +110,10 @@ in {
 
       # formatter
       efm-langserver
-
+      # bash
+      bats
+      nodePackages_latest.bash-language-server
+      shfmt
       # go
       # delve
       # golangci-lint
