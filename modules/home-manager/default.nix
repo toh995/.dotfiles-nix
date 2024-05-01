@@ -64,7 +64,6 @@ in {
       eza
       fzf
       git
-      lazydocker
       kopia
       lazygit
       mpv
