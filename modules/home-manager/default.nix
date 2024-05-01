@@ -84,12 +84,8 @@ in {
       xdg-utils # xdg-open
 
       # zsh
-      zsh-vi-mode
-      # powerlevel10k, font
       zsh-powerlevel10k
-      # meslo-lgs-nf
-      (pkgs.nerdfonts.override {fonts = ["DejaVuSansMono"];})
-      # nerdfonts
+      zsh-vi-mode
 
       # Neovim
       vim
