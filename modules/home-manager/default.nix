@@ -54,6 +54,7 @@ in {
       firefox
       keepassxc
       rofi
+      zathura
 
       udiskie
 
@@ -155,6 +156,7 @@ in {
       ./tmux
       ./udiskie
       ./xdg
+      ./zathura
       ./zsh
     ];
   };
