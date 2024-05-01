@@ -52,6 +52,7 @@ in {
       brave
       dunst
       firefox
+      flameshot
       keepassxc
       obsidian
       rofi
@@ -149,6 +150,7 @@ in {
       ./brave
       ./dunst
       ./firefox
+      ./flameshot
       ./git
       ./lazygit
       ./python
