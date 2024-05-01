@@ -53,6 +53,7 @@ in {
       dunst
       firefox
       keepassxc
+      obsidian
       rofi
       zathura
 

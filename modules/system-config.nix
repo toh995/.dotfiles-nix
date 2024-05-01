@@ -1,5 +1,6 @@
 {
   config,
+  lib,
   pkgs,
   ...
 }: {
@@ -101,6 +102,11 @@
     isNormalUser = true;
     extraGroups = ["wheel"];
   };
+
+  nixpkgs.config.allowUnfreePredicate = pkg:
+    builtins.elem (lib.getName pkg) [
+      "obsidian"
+    ];
 
   # Set up sudo
   security.sudo = {
