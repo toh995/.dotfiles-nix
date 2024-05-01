@@ -76,6 +76,7 @@ in {
       firefox
       flameshot
       keepassxc
+      libreoffice-fresh
       obsidian
       pcmanfm
       udiskie
