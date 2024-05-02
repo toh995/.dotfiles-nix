@@ -61,6 +61,8 @@ in {
       rofi
       zathura
 
+      # nand2tetris
+      jdk
 
       # CLI programs
       btop
