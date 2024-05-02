@@ -70,16 +70,15 @@ in {
       git
       kopia
       lazygit
-      mpv
       neofetch
       nnn
+      pipe-viewer
       rclone
       ripgrep
       spotify-player
       tealdeer
       tmux
       trash-cli
-      youtube-dl
       zoxide
 
       # CLI utils
