@@ -39,17 +39,18 @@
       configFile = "${config.users.users.toh995.home}/.dotfiles-nix/modules/home-manager/qtile/config.py";
     };
 
-    displayManager = {
-      defaultSession = "none+qtile";
-      autoLogin = {
-        enable = true;
-        user = "toh995";
-      };
-      lightdm = {
-        enable = true;
-        greeter.enable = false;
-        autoLogin.timeout = 0;
-      };
+    displayManager.lightdm = {
+      enable = true;
+      greeter.enable = false;
+      autoLogin.timeout = 0;
+    };
+  };
+
+  services.displayManager = {
+    defaultSession = "none+qtile";
+    autoLogin = {
+      enable = true;
+      user = "toh995";
     };
   };
 
