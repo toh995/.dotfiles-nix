@@ -49,6 +49,11 @@ alias n="nvim ."
 # nnn
 export NNN_OPTS="H"
 
+# node
+export NODE_REPL_HISTORY="$XDG_STATE_HOME"/nodejs/.node_repl_history
+[[ -f "${NODE_REPL_HISTORY}" ]] || \
+  mkdir -p "$( dirname "${NODE_REPL_HISTORY}" )"
+
 # spotify_player
 alias spt="spotify_player"
 
