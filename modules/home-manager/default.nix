@@ -177,6 +177,7 @@ in {
       ./flameshot
       ./git
       ./lazygit
+      ./npm
       ./pcmanfm
       ./python
       ./qtile
