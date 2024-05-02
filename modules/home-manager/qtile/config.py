@@ -112,15 +112,15 @@ screens = [
     for screen_id in SCREEN_IDS
 ]
 
-# ALACRITTY_CFG = (
-#     f"{os.environ['HOME']}/.dotfiles-nix/modules/home-manager/alacritty/alacritty.yml"
-# )
+ALACRITTY_CFG = (
+    f"{os.environ['HOME']}/.dotfiles-nix/modules/home-manager/alacritty/alacritty.toml"
+    # f"{os.environ['HOME']}/.config/alacritty/alacritty.toml"
+)
 # ROFI_CFG = f"{os.environ['HOME']}/.dotfiles-nix/modules/home-manager/rofi/config.rasi"
 
 keys = [
     # Open default apps
-    # Key([ALT], RETURN, lazy.spawn(f"alacritty --config-file {ALACRITTY_CFG}")),
-    Key([ALT], RETURN, lazy.spawn("alacritty")),
+    Key([ALT], RETURN, lazy.spawn(f"alacritty --config-file {ALACRITTY_CFG}")),
     Key([ALT], "b", lazy.spawn("brave")),
     # Key([ALT], SPACE, lazy.spawn(f"rofi -show-icons -show drun -config {ROFI_CFG}")),
     Key([ALT], SPACE, lazy.spawn("rofi -show-icons -show drun")),
