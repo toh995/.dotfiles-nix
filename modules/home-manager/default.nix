@@ -70,6 +70,7 @@ in {
       eza
       fzf
       git
+      jq
       kopia
       lazygit
       neofetch
