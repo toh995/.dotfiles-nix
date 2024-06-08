@@ -139,6 +139,8 @@ in {
       ruff-lsp
 
       # nvim build dependencies
+      # CLI to build latex
+      tree-sitter
       # for nvim-treesitter
       gcc
       # for markdown-preview
