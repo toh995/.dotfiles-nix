@@ -34,8 +34,6 @@
 
     windowManager.qtile = {
       enable = true;
-      backend = "x11";
-      # backend = "wayland";
       configFile = "${config.users.users.toh995.home}/.dotfiles-nix/modules/home-manager/qtile/config.py";
     };
 
@@ -47,7 +45,7 @@
   };
 
   services.displayManager = {
-    defaultSession = "none+qtile";
+    defaultSession = "qtile";
     autoLogin = {
       enable = true;
       user = "toh995";
