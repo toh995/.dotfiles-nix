@@ -8,7 +8,7 @@
     enable = true;
     gtk2.configLocation = "${config.xdg.configHome}/gtk-2.0/gtkrc";
     theme = {
-      package = pkgs.gnome.gnome-themes-extra;
+      package = pkgs.gnome-themes-extra;
       name = "Adwaita-dark";
       # package = pkgs.materia-kde-theme;
       # name = "Materia-dark-compact";
