@@ -15,6 +15,14 @@
   # Auto-select the first boot entry
   boot.loader.timeout = 0;
 
+  # Storage optimizations, gc, etc.
+  nix.settings.auto-optimise-store = true;
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 60d";
+  };
+
   # Set the timezone
   time.timeZone = "US/Pacific";
   # services.automatic-timezoned.enable = true;
@@ -51,6 +59,12 @@
       user = "toh995";
     };
   };
+
+  # Allow unfree packages
+  nixpkgs.config.allowUnfreePredicate = pkg:
+    builtins.elem (lib.getName pkg) [
+      "obsidian"
+    ];
 
   # Enable audio
   # Reference: https://nixos.wiki/wiki/PipeWire
@@ -105,11 +119,6 @@
     isNormalUser = true;
     extraGroups = ["wheel"];
   };
-
-  nixpkgs.config.allowUnfreePredicate = pkg:
-    builtins.elem (lib.getName pkg) [
-      "obsidian"
-    ];
 
   # Set up sudo
   security.sudo = {
