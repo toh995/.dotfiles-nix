@@ -41,7 +41,7 @@ in {
       # name = "phinger-cursors";
       # size = 32;
       package = pkgs.apple-cursor;
-      name = "macOS-Monterey";
+      name = "macOS";
       size = 24;
       gtk.enable = true;
     };
