@@ -1,4 +1,8 @@
-{pkgs, ...}: let
+{
+  lib,
+  pkgs,
+  ...
+}: let
   pyEnv = pkgs.python3.withPackages (p: [pkgs.qtile-unwrapped]);
 in {
   home-manager.useGlobalPkgs = true;
@@ -51,7 +55,7 @@ in {
       alacritty
       brave
       dunst
-      firefox
+      (lib.hiPrio firefox)
       flameshot
       keepassxc
       libreoffice-fresh
