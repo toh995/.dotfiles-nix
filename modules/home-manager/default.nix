@@ -148,7 +148,7 @@ in {
       # for nvim-treesitter
       gcc
       # for markdown-preview
-      nodejs_20
+      nodejs
       yarn
       # for telescope fzf
       gnumake
