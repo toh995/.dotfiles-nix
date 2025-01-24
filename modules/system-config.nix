@@ -89,8 +89,10 @@
       noto-fonts-color-emoji
       noto-fonts-emoji-blob-bin
       noto-fonts-monochrome-emoji
-      (pkgs.nerdfonts.override {fonts = ["DejaVuSansMono"];})
-      # nerdfonts
+      nerd-fonts.dejavu-sans-mono
+
+      # All nerd fonts:
+      # builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts)
     ];
     fontconfig = {
       enable = true;
