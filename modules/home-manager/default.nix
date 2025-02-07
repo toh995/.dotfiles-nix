@@ -86,6 +86,8 @@ in {
       tealdeer
       tmux
       trash-cli
+      unzip
+      xsel
       zoxide
 
       # CLI utils
