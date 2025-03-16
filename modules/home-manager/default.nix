@@ -140,7 +140,7 @@ in {
       # python
       black # formatter
       # nodePackages.pyright # type-checker
-      python311Packages.python-lsp-server
+      python313Packages.python-lsp-server
       ruff # linter
       ruff-lsp
 

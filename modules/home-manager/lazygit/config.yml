@@ -7,8 +7,8 @@ git:
     pager: delta --dark --paging=never
   commitPrefixes:
     auditboard-frontend:
-      pattern: "^(SOX-[0-9]{1,}).*"
-      replace: "$1"
+      - pattern: "^(SOX-[0-9]{1,}).*"
+        replace: "$1"
     soxhub-api:
-      pattern: "^(SOX-[0-9]{1,}).*"
-      replace: "$1"
+      - pattern: "^(SOX-[0-9]{1,}).*"
+        replace: "$1"
