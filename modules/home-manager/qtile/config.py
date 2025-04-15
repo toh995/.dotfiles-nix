@@ -97,7 +97,11 @@ screens = [
                 widget.CurrentScreen(font=BAR_FONT_NAME),
                 widget.Spacer(),
                 widget.ThermalZone(
-                    high=50, crit=80, fontsize=BAR_FONT_SIZE, font=BAR_FONT_NAME
+                    high=50,
+                    crit=80,
+                    fontsize=BAR_FONT_SIZE,
+                    font=BAR_FONT_NAME,
+                    zone="/sys/class/hwmon/hwmon1/temp3_input",
                 ),
                 widget.Sep(padding=20),
                 widget.Clock(
