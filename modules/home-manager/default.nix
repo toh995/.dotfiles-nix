@@ -142,7 +142,6 @@ in {
       # nodePackages.pyright # type-checker
       python313Packages.python-lsp-server
       ruff # linter
-      ruff-lsp
 
       # nvim build dependencies
       # CLI to build latex

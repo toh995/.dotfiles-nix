@@ -14,7 +14,7 @@
 
     # home-manager will generate a read-only .zshrc.
     # Here we append some custom stuff to the generated .zshrc
-    initExtra = builtins.readFile ./.zshrc;
+    initContent = builtins.readFile ./.zshrc;
 
     plugins = [
       # vi mode
