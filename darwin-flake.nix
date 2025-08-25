@@ -23,7 +23,7 @@
     };
   };
 
-  outputs = inputs @ {
+  outputs = {
     self,
     nix-darwin,
     nixpkgs,
@@ -102,6 +102,20 @@
               springboard-show-duration = 0.0;
               springboard-hide-duration = 0.0;
               springboard-page-duration = 0.0;
+            };
+            # Voice dictation
+            "com.apple.assistant.support" = {
+              "Dictation Enabled" = 1;
+              "Offline Dictation Status" = {
+                "en-us" = {
+                  "Auto Punctuation" = 1;
+                  "Continuous Listening" = 1;
+                  "Emoji Recognition" = 1;
+                  "High Quality" = 1;
+                  Installed = 1;
+                  "On Device Search" = 1;
+                };
+              };
             };
             "com.apple.safari" = {
               AutoFillCreditCardData = 0;
