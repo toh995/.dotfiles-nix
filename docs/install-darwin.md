@@ -6,11 +6,12 @@ softwareupdate --install-rosetta
 
 # Download and set up config files
 mkdir -p ~/code
+cd ~/code
 git clone https://github.com/toh995/.dotfiles-nix.git
 
 sudo mkdir -p /etc/nix-darwin
 sudo chown $(id -nu):$(id -ng) /etc/nix-darwin
-ln -s ~/code/.dotfiles-nix/darwin-flake.nix /etc/nix-darwin/flake.nix
+ln ~/code/.dotfiles-nix/darwin-flake.nix /etc/nix-darwin/flake.nix
 
 # IMPORTANT: Ensure that the flake.nix file has the correct host
 # (example host name "toh995s-Mac-mini")
@@ -22,14 +23,19 @@ scutil --get LocalHostName
 curl -fsSL https://install.determinate.systems/nix | sh -s -- install
 
 # Go to Settings => Privacy & Security => Full Disk Access, and allow access for Terminal
+# 
+# We need to restart the terminal for two reasons:
+# 1. Grant Full Disk Access
+# 2. Get `nix` into the $PATH
 
 # Install the flake
-# You may need to restart your terminal, to get `nix` into your path
 sudo nix run nix-darwin/master#darwin-rebuild -- switch
 ```
 
 ## Reboot
 Reboot, to see latest changes
+
+## Arrange monitors
 
 ## Setup 3rd Party apps
 ### Rectangle
