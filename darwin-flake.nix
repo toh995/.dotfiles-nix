@@ -147,10 +147,13 @@
         onActivation.cleanup = "uninstall";
         casks = [
           "alacritty"
+          "claude-code"
           # "displaylink"
           "elecom-mouse-util"
           "font-dejavu-sans-mono-nerd-font"
           "keepassxc"
+          "libreoffice"
+          "obsidian"
           "rectangle"
           "vladdoster/formulae/vimari"
         ];
@@ -172,7 +175,13 @@
           # Neovim dependencies
           "tree-sitter-cli"
           "volta"
-          #
+          # Lua
+          "lua-language-server"
+          "stylua"
+          # Python
+          "basedpyright"
+          "ruff"
+          "uv"
         ];
       };
     };
