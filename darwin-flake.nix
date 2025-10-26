@@ -156,6 +156,7 @@
           "obsidian"
           "rectangle"
           "vladdoster/formulae/vimari"
+          "zoom"
         ];
         brews = [
           "btop"
