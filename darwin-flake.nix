@@ -138,6 +138,11 @@
     };
     packageConfig = {pkgs, ...}: {
       environment.systemPackages = with pkgs; [
+        # haskell
+        fourmolu
+        haskell.packages.ghc967.cabal-install
+        haskell.compiler.ghc967
+        haskell.packages.ghc967.haskell-language-server
         # nix
         alejandra # formatter
         nil # language server
