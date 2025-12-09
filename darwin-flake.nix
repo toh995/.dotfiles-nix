@@ -144,7 +144,11 @@
       ];
       homebrew = {
         enable = true;
-        onActivation.cleanup = "uninstall";
+        onActivation = {
+          autoUpdate = true;
+          cleanup = "uninstall";
+          upgrade = true;
+        };
         casks = [
           "alacritty"
           "claude-code"
