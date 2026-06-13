@@ -50,7 +50,7 @@ VOL_UP = "XF86AudioRaiseVolume"
 def on_startup() -> None:
     # set default groups
     for screen in qtile.screens:
-        screen.cmd_toggle_group(
+        screen.toggle_group(
             group_name=initial_group_name_for_screen_id(screen.index),
             warp=False,
         )

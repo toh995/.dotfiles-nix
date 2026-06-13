@@ -63,13 +63,13 @@ def get_next_group_name(direction: Direction, qtile: Qtile) -> str | None:
 @curry
 def focus_group(direction: Direction, qtile: Qtile) -> None:
     next_group_name = get_next_group_name(direction, qtile)
-    qtile.current_screen.cmd_toggle_group(next_group_name)
+    qtile.current_screen.toggle_group(next_group_name)
 
 
 @curry
 def move_to_group(direction: Direction, qtile: Qtile) -> None:
     next_group_name = get_next_group_name(direction, qtile)
-    qtile.current_window.cmd_togroup(next_group_name, switch_group=False)
+    qtile.current_window.togroup(next_group_name, switch_group=False)
     focus_group(direction, qtile)
 
 
@@ -78,9 +78,9 @@ def get_next_screen_id(direction: Direction, qtile: Qtile) -> int | None:
 
     match direction:
         case Direction.LEFT:
-            return curr_screen_id - 1 % len(qtile.screens)
+            return (curr_screen_id - 1) % len(qtile.screens)
         case Direction.RIGHT:
-            return curr_screen_id + 1 % len(qtile.screens)
+            return (curr_screen_id + 1) % len(qtile.screens)
         case _:
             return None
 
@@ -88,11 +88,11 @@ def get_next_screen_id(direction: Direction, qtile: Qtile) -> int | None:
 @curry
 def focus_screen(direction: Direction, qtile: Qtile) -> None:
     next_screen_id = get_next_screen_id(direction, qtile)
-    qtile.cmd_to_screen(next_screen_id)
+    qtile.to_screen(next_screen_id)
 
 
 @curry
 def move_to_screen(direction: Direction, qtile: Qtile) -> None:
     next_screen_id = get_next_screen_id(direction, qtile)
-    qtile.current_window.cmd_toscreen(next_screen_id)
+    qtile.current_window.toscreen(next_screen_id)
     focus_screen(direction, qtile)
