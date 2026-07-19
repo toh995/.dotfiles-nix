@@ -142,6 +142,10 @@ in {
       # nodePackages.pyright # type-checker
       python313Packages.python-lsp-server
       ruff # linter
+      # rocq
+      rocq-core
+      rocqPackages.stdlib
+      coqPackages.coq-lsp
 
       # nvim build dependencies
       # CLI to build latex
@@ -168,6 +172,7 @@ in {
       ./pcmanfm
       ./python
       ./qtile
+      ./rocq
       ./rofi
       ./scripts
       ./spotify-player
