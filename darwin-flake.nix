@@ -146,7 +146,20 @@
         # nix
         alejandra # formatter
         nil # language server
+
+        # rocq
+        rocq-core
+        rocqPackages.stdlib
+        coqPackages.coq-lsp
       ];
+
+      # rocq-core ships without the standard library (split into rocqPackages.stdlib
+      # in Rocq 9), and the stdlib package has no setup-hook to register itself.
+      # Point ROCQPATH at its user-contrib so `rocq` and coq-lsp can resolve the
+      # `Stdlib` logical path (otherwise `From Stdlib Require ...` fails).
+      environment.variables.ROCQPATH =
+        "${pkgs.rocqPackages.stdlib}/lib/coq/${pkgs.rocqPackages.rocq-core.rocq-version}/user-contrib";
+
       homebrew = {
         enable = true;
         onActivation = {
