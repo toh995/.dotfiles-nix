@@ -72,12 +72,12 @@ in {
       btop
       delta
       eza
+      fastfetch
       fzf
       git
       jq
       kopia
       lazygit
-      neofetch
       nnn
       pipe-viewer
       rclone
