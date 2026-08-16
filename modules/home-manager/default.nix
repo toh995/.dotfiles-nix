@@ -118,8 +118,8 @@ in {
       # formatter
       efm-langserver
       # bash
+      bash-language-server
       bats
-      nodePackages_latest.bash-language-server
       shfmt
       # go
       # delve
