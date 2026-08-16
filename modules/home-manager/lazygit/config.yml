@@ -2,9 +2,9 @@ promptToReturnFromSubprocess: false
 gui:
   showIcons: true
 git:
-  pagers:
+  diffRenderers:
     - colorArg: always
-      pager: delta --dark --paging=never
+      command: delta --dark --paging=never
   commitPrefixes:
     auditboard-frontend:
       - pattern: "^(SOX-[0-9]{1,}).*"
