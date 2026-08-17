@@ -140,7 +140,7 @@ in {
       nil # lsp
       # python
       black # formatter
-      # nodePackages.pyright # type-checker
+      pyright # type-checker
       python313Packages.python-lsp-server
       ruff # linter
       # rocq
