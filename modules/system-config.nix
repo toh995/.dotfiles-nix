@@ -159,4 +159,10 @@
       }
     ];
   };
+
+  # Accept incoming ssh from other machines on the LAN
+  services.openssh = {
+    enable = true;
+    settings.PermitRootLogin = "no";
+  };
 }
