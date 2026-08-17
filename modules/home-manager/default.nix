@@ -39,6 +39,7 @@ in {
 
     # Set mouse cursor
     home.pointerCursor = {
+      enable = true;
       # package = pkgs.catppuccin-cursors.mochaDark;
       # name = "Catppuccin-Mocha-Dark-Cursors";
       # package = pkgs.phinger-cursors;
@@ -61,8 +62,8 @@ in {
       libreoffice-fresh
       obsidian
       pcmanfm
-      udiskie
       rofi
+      udiskie
       zathura
 
       # nand2tetris
