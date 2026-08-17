@@ -164,6 +164,7 @@ in {
       ./alacritty
       ./bash
       ./brave
+      ./direnv
       ./dunst
       ./firefox
       ./flameshot
