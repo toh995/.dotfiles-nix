@@ -1,0 +1,15 @@
+Register the newer H100i RGB PRO XT hardware revision (USB id 1b1c:0c2d) with
+the hydro_platinum driver. Same protocol as the supported 0c20 revision.
+Upstream: https://github.com/liquidctl/liquidctl/issues/442 (unmerged PR #891).
+
+--- a/liquidctl/driver/hydro_platinum.py
++++ b/liquidctl/driver/hydro_platinum.py
+@@ -125,6 +125,8 @@
+             {'fan_count': 2, 'fan_leds': 0}),
+         (0x1b1c, 0x0c20, 'Corsair Hydro H100i Pro XT',
+             {'fan_count': 2, 'fan_leds': 0}),
++        (0x1b1c, 0x0c2d, 'Corsair Hydro H100i Pro XT (rev. 2)',
++            {'fan_count': 2, 'fan_leds': 0}),
+         (0x1b1c, 0x0c21, 'Corsair Hydro H115i Pro XT',
+             {'fan_count': 2, 'fan_leds': 0}),
+         (0x1b1c, 0x0c22, 'Corsair Hydro H150i Pro XT',
