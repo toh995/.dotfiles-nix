@@ -59,7 +59,7 @@ in {
       (lib.hiPrio firefox)
       flameshot
       keepassxc
-      libreoffice-fresh
+      libreoffice
       obsidian
       pcmanfm
       rofi
