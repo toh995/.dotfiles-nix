@@ -1,6 +1,14 @@
 [user]
   name = toh995
   email = 52012721+toh995@users.noreply.github.com
+  signingkey = ~/.ssh/id_ed25519.pub
+
+[gpg]
+  format = ssh
+[commit]
+  gpgsign = true
+[tag]
+  gpgsign = true
 
 [pull]
   ff = only
